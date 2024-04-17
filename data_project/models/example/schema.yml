@@ -1,6 +1,15 @@
 
 version: 2
 
+sources: 
+  - name: example
+    database: valiant-surfer-411804
+    schema: sol_data
+
+    tables: 
+      - name: 2022_sol_data
+      - name: 2023_sol_data
+
 models:
     - name: my_first_dbt_model
       description: "A starter dbt model"
