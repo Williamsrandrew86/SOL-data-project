@@ -49,7 +49,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 3. **SSH Key Configuration:**
    - Generate an SSH key pair on your personal computer.
    - Add the public key to the VM's metadata settings to establish secure SSH connections.
-
+![Virtual Machine is up and running](
 ## BigQuery Setup
 
 1. **Project Creation:**
