@@ -52,7 +52,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
      
 4. **Start the jupyter notebook**
    - copy and paste the local host into the address bar
-     gitbash photo here
+     ![gitbash photo here](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/login%20notebook.png)
 
 5. **Upload the data**
    - Create a new notebook
