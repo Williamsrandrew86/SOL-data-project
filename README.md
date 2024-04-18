@@ -51,24 +51,24 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
    - Add the public key to the VM's metadata settings to establish secure SSH connections.
      
 4. **Start the jupyter notebook**
-   - copy and paste the local host into the address bar
+   - Copy and paste the local host into the address bar
      ![gitbash photo here](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/login%20notebook.png)
 
 5. **Upload the data**
    - Create a new notebook
-   - upload the following libraries
+   - Upload the following libraries
      -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
-   - upload the data to create two data frames from the repositiory
+   - Upload the data to create two data frames from the repositiory
      - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/data%20pull.png)
    - Transformation done to each data frame (make sure you repeat for both data frames)
-     - drop columns that were not needed
+     - Drop columns that were not needed
        ![drop](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/drop%20column.png)
-     - replace the ' ' and '-' with '_' in all column names
+     - Replace the ' ' and '-' with '_' in all column names
        ![name change](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/mod%20column%20names.png)
-     - modify data within columns
-       - replace '<' with '-9999'
-       - change nan with 'None'
-       - change data type to int
+     - Modify data within columns
+       - Replace '<' with '-9999'
+       - Change nan with 'None'
+       - Change data type to int
          ![modify data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/change%20values.png)
    
        
@@ -121,8 +121,8 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
      ![configtable](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/configtable.png)
 
    - Transformation
-     -inner join the dataframes
-     -change -9999 to 'Null'
+     -Inner join the dataframes
+     -Change -9999 to 'Null'
      -Create two columns "Pass_Fail_(year)" that look at pass_rate and fill the column with the correct value that met the condition
 
      ![sqlcode](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sqlcode.png)
@@ -141,7 +141,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
   
      ![lookerdata](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdata.png)
 
- 2. **create an interactive Dashboard**
+ 2. **Create an interactive Dashboard**
     - Drag your data into the fields and make adjustment as needed to create a visual you desire to see
    
       ![lookerdash](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdash.png)
