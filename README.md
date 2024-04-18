@@ -8,7 +8,11 @@ Public education is free and appropriate for all bodies from kindergarten age to
 ## 2. Data Architecture
 
 I created a data architure flow for the Data Engineering Zoomcamp 2024.  This flows is for a batching processing.
+![data architecture](
+(insert picture here)
 
+
+#3 
 
 
 
