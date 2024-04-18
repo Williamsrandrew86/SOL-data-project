@@ -37,7 +37,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 
 ## 6. Reproducibility
 
-## Virtual Machine Setup
+## Virtual Machine
 
 1. **Anaconda Python Installation:**
    - Install Anaconda Python on the VM to manage packages and environments efficiently.
@@ -60,7 +60,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
      -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
    - upload the data to create two data frames from the repositiory
      - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/data%20pull.png)
-   - Transformation done to each data frame (make sure you repeate for both data frames)
+   - Transformation done to each data frame (make sure you repeat for both data frames)
      - drop columns that were not needed
        ![drop](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/drop%20column.png)
      - replace the ' ' and '-' with '_' in all column names
@@ -72,24 +72,35 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
          ![modify data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/change%20values.png)
    
        
-## BigQuery Setup
+## BigQuery
 
 1. **Project Creation:**
    - Create a new project in BigQuery through the Google Cloud Console.
-     ![new project](
+     
+     ![new project](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/new_project.png)
+     
 2. **Dataset Creation:**
    - Within the project, create a dataset named `sol_data` to store the project's data.
-     ![dataset create](
+     
+     ![dataset create](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/createdataset.png)
      
 3. **Role Configuration:**
    - Set up a custom role in the Google Cloud Console that grants read/write access to BigQuery.
-     ![environment link](
+     
+     ![environment link](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/IAM.png)
+     ![keys](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/keys.png)
 
  4. **Data Frame pushed into BigQuery**
    - Write code that accesses BidQuery and create tables in the 'sol_data'
-     ![tablecreate](
+      - Environment key to BigQuery
+        
+        ![Enviroment](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/enviroment.png)
+        
+      - Create tables in BigQuery(make sure you repeat create_or_append for all data frames)
 
-## DBT Setup
+        ![tablecreate](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/table%20create.png)
+
+## DBT
 
 1. **DBT Project Creation:**
    - Create a new project within DBT Cloud for data transformation tasks.
@@ -104,24 +115,36 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
    - Grant access to the GitHub repository to DBT for seamless integration.
    - Transfer necessary files and folders for DBT execution to the repository.
 
-## Project Execution
+5. **Create SQL case**
+   - Configure a table
 
-1. **Python Script Execution:**
-   - Run a Python script on the VM to pull data from a GitHub source to BigQuery.
-   - Ensure the script references the correct SSH key and folder location for the BigQuery role.
-   - Update the project ID in the script with your specific project ID.
+     ![configtable](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/configtable.png)
 
-2. **DBT Script Execution:**
-   - Execute DBT scripts to create an integrated dataset based on the transformed data.
+   - Transformation
+     -inner join the dataframes
+     -change -9999 to 'Null'
+     -Create two columns "Pass_Fail_(year)" that look at pass_rate and fill the column with the correct value that met the condition
 
-3. **Scheduled Execution (Optional):**
-   - Schedule the script to run daily, simulating a daily data integration process.
+     ![sqlcode](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sqlcode.png)
+     
+## Schedule Execution
+   - Schedule the script to run yearly around September.  The SOL scores are updated yearly on the VDOE website.
 
 ## Looker Setup
 
 1. **Looker Studio Connection:**
    - Connect Looker to your Google Cloud project.
-   - Grant Looker access to the integrated dataset for visualization and analysis.
+  
+     ![lookerstart](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerstudiolink.png)
+
+   - Add the data to Lookerstudio
+  
+     ![lookerdata](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdata.png)
+
+ 2. **create an interactive Dashboard**
+    - Drag your data into the fields and make adjustment as needed to create a visual you desire to see
+   
+      ![lookerdash](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdash.png)
 
 
 
