@@ -49,7 +49,25 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 3. **SSH Key Configuration:**
    - Generate an SSH key pair on your personal computer.
    - Add the public key to the VM's metadata settings to establish secure SSH connections.
-![Virtual Machine is up and running](
+     
+4. **Start the jupyter notebook**
+   - copy and paste the local host into the address bar
+     gitbash photo here
+
+5. **Upload the data**
+   - Create a new notebook
+   - upload the following libraries
+     -  
+   - upload the data to create two data frames from the repositiory
+     - photo of data
+   - Transformation done to each data frame
+     - drop columns that were not needed
+     - replace the ' ' and '-' with '_' in all column names
+     - modify data in column
+       - replace '<' with '-9999'
+       - change nan with 'None'
+       - change data type to int
+       
 ## BigQuery Setup
 
 1. **Project Creation:**
