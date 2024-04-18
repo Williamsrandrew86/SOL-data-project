@@ -59,7 +59,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
    - upload the following libraries
      -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
    - upload the data to create two data frames from the repositiory
-     - photo of data
+     - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
    - Transformation done to each data frame
      - drop columns that were not needed
      - replace the ' ' and '-' with '_' in all column names
