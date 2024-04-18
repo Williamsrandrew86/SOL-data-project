@@ -32,6 +32,8 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 
 ## 5. Dashboard
 
+!(dashboard)[Screenshot 2024-04-18 021244.png]
+
 ## 6. Reproducibility
 
 
