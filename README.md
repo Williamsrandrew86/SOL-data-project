@@ -57,7 +57,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 5. **Upload the data**
    - Create a new notebook
    - upload the following libraries
-     -  
+     -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
    - upload the data to create two data frames from the repositiory
      - photo of data
    - Transformation done to each data frame
