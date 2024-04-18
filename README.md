@@ -59,25 +59,35 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
    - upload the following libraries
      -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
    - upload the data to create two data frames from the repositiory
-     - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
-   - Transformation done to each data frame
+     - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/data%20pull.png)
+   - Transformation done to each data frame (make sure you repeate for both data frames)
      - drop columns that were not needed
+       ![drop](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/drop%20column.png)
      - replace the ' ' and '-' with '_' in all column names
-     - modify data in column
+       ![name change](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/mod%20column%20names.png)
+     - modify data within columns
        - replace '<' with '-9999'
        - change nan with 'None'
        - change data type to int
+         ![modify data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/change%20values.png)
+   
        
 ## BigQuery Setup
 
 1. **Project Creation:**
    - Create a new project in BigQuery through the Google Cloud Console.
-
+     ![new project](
 2. **Dataset Creation:**
    - Within the project, create a dataset named `sol_data` to store the project's data.
-
+     ![dataset create](
+     
 3. **Role Configuration:**
    - Set up a custom role in the Google Cloud Console that grants read/write access to BigQuery.
+     ![environment link](
+
+ 4. **Data Frame pushed into BigQuery**
+   - Write code that accesses BidQuery and create tables in the 'sol_data'
+     ![tablecreate](
 
 ## DBT Setup
 
