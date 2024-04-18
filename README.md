@@ -10,11 +10,6 @@ Public education is free and appropriate for all bodies from kindergarten age to
 I created a data architure flow for the Data Engineering Zoomcamp 2024.  This flows is for a batching processing.
 ![data architecture](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Screenshot%202024-04-18%20011918.png)
 
-
-## 3. Objective
-
-The goal of this project was to build an end-to-end data pipeline.  First setup a VM that can run Anaconda Python and can be accessed with an SSH key.  Then create a BigQuery project through the Google Console that will store the data. This will require a policy role that allows access to read/write access to BigQuery.  Followed by creating a DBT project within the DBT Cloud that connects to the BigQuery using the role that was created to access read/write access to BigQuery.  A GitHub repository will also need to be created.  Connect the GitHub account to DBT and port over the files and folders for the DBT execution. Finally use Looker Studio and connect it to the google console and give it access to the integrated dataset to create dashboards.
-
 ## 3.Technology Used
 
 The technology used for the project are as follows:
@@ -49,6 +44,7 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
 3. **SSH Key Configuration:**
    - Generate an SSH key pair on your personal computer.
    - Add the public key to the VM's metadata settings to establish secure SSH connections.
+     ![sshconnetionmade](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sshlogin.png)
      
 4. **Start the jupyter notebook**
    - Copy and paste the local host into the address bar
