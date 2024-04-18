@@ -11,7 +11,7 @@ With the school systems in Virginia, [the VDOE website](https://www.doe.virginia
 
 I created a data architure flow for the Data Engineering Zoomcamp 2024.
 
-![data architecture](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Screenshot%202024-04-18%20011918.png)
+![data architecture](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/dataArchitecture.png)
 
 ### Architecture Components
 
@@ -50,7 +50,7 @@ The technology used for the project are as follows:
 
 ## 4 Dashboard
 
-![dashboard](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Screenshot%202024-04-18%20021244.png)
+![dashboard](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/dashboard.png)
 [dashboard](https://lookerstudio.google.com/s/hdFwzPT_GC0)
 
 ## 5. Reproducibility
@@ -67,28 +67,28 @@ The technology used for the project are as follows:
 3. **SSH Key Configuration:**
    - Generate an SSH key pair on your personal computer.
    - Add the public key to the VM's metadata settings to establish secure SSH connections.
-     ![sshconnetionmade](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sshlogin.png)
+     ![sshconnetionmade](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/sshlogin.png)
      
 4. **Start the jupyter notebook**
    - Copy and paste the local host into the address bar
-     ![gitbash photo here](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/login%20notebook.png)
+     ![gitbash photo here](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/login%20notebook.png)
 
 5. **Upload the data**
    - Create a new notebook
    - Upload the following libraries
-     -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/libraries.png)
+     -  ![libraries](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/library.png)
    - Upload the data to create two data frames from the repositiory
-     - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/data%20pull.png)
+     - ![photo of data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/data%20pull.png)
    - Transformation done to each data frame (make sure you repeat for both data frames)
      - Drop columns that were not needed
-       ![drop](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/drop%20column.png)
+       ![drop](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/drop%20column.png)
      - Replace the ' ' and '-' with '_' in all column names
-       ![name change](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/mod%20column%20names.png)
+       ![name change](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/mod%20column%20names.png)
      - Modify data within columns
        - Replace '<' with '-9999'
        - Change nan with 'None'
        - Change data type to int
-         ![modify data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/change%20values.png)
+         ![modify data](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/change%20values.png)
    
        
 ## BigQuery
@@ -96,28 +96,28 @@ The technology used for the project are as follows:
 1. **Project Creation:**
    - Create a new project in BigQuery through the Google Cloud Console.
      
-     ![new project](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/new_project.png)
+     ![new project](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/adddatadet.png)
      
 2. **Dataset Creation:**
    - Within the project, create a dataset named `sol_data` to store the project's data.
      
-     ![dataset create](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/createdataset.png)
+     ![dataset create](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/createdataset.png)
      
 3. **Role Configuration:**
    - Set up a custom role in the Google Cloud Console that grants read/write access to BigQuery.
      
-     ![environment link](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/IAM.png)
-     ![keys](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/keys.png)
+     ![environment link](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/IAM.png)
+     ![keys](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/keys.png)
 
  4. **Data Frame pushed into BigQuery**
    - Write code that accesses BidQuery and create tables in the 'sol_data'
       - Environment key to BigQuery
         
-        ![Enviroment](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/enviroment.png)
+        ![Enviroment](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/enviroment.png)
         
       - Create tables in BigQuery(make sure you repeat create_or_append for all data frames)
 
-        ![tablecreate](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/table%20create.png)
+        ![tablecreate](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/table%20create.png)
 
 ## DBT
 
@@ -137,14 +137,14 @@ The technology used for the project are as follows:
 5. **Create SQL case**
    - Configure a table
 
-     ![configtable](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/configtable.png)
+     ![configtable](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/configtable.png)
 
    - Transformation
      - Inner join the dataframes
      - Create two columns "Pass_Fail_(year)" that look at pass_rate and fill the column with the correct value that met the condition
      - If the score was below a 70 then it was considered a Fail, Pass if above 70 and Null if the data was missing
 
-     ![sqlcode](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sqlcode.png)
+     ![sqlcode](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/sqlcode.png)
      
 ## Schedule Execution
    - Schedule the script to run yearly around September.  The SOL scores are updated yearly on the VDOE website.
@@ -154,16 +154,16 @@ The technology used for the project are as follows:
 1. **Looker Studio Connection:**
    - Connect Looker to your Google Cloud project.
   
-     ![lookerstart](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerstudiolink.png)
+     ![lookerstart](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/lookerstudiolink.png)
 
    - Add the data to Lookerstudio
   
-     ![lookerdata](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdata.png)
+     ![lookerdata](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/lookerdata.png)
 
  2. **Create an interactive Dashboard**
     - Drag your data into the fields and make adjustment as needed to create a visual you desire to see
    
-      ![lookerdash](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/lookerdash.png)
+      ![lookerdash](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Images/lookerdash.png)
 
 
 
