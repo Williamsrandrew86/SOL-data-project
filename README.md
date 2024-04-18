@@ -11,13 +11,30 @@ I created a data architure flow for the Data Engineering Zoomcamp 2024.
 
 ![data architecture](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Screenshot%202024-04-18%20011918.png)
 
-"The source data is located in a github repository for public and easy access. The first Python block 
+### Architecture Components
 
-#### Imports the data
-#### Drops unused columns
-#### Deals with messy columns to convert them to numeric
-#### Adds -9999 for null values as an error code.
-#### Pushes the data to two separate raw files in BigQuery
+The source data is located in a github repository for public and easy access. The first Python block:
+
+- Imports the data
+- Drops unused columns
+- Deals with messy columns to convert them to numeric
+- Adds -9999 for null values as an error code.
+- Pushes the data to two separate raw files in BigQuery
+
+The DBT process:
+
+- Pulls the data from BigQuery
+- Innerjoin the two dataframes
+- Change the -9999 to Null
+- Created two columns for Pass_Fail_(year)
+- Push the dataframe back to BigQuery
+
+Looker Studio:
+
+- Connected Looker Studio to BigQuery
+- Uploaded the data into Looker Studio
+- Created interactive Dashboards
+
 
 
 ## 3.Technology Used
