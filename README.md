@@ -2,7 +2,9 @@
 
 ## 1. Description of the problem
 
-Public education is free and appropriate for all bodies from kindergarten age to 12th grade level.  Ever since Covid shut down the world in 2020, the education system has been under fire even more so due to students losing at least a year of learning while still being pushed forward with the expectation that those students are on pace with the learning curriculum for the new current grade or subject.  With the school systems in Virginia, [the VDOE website](https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/sol-test-pass-rates-other-results) has a gap of data for the school year of 2020-2021 thus, a reset has been established.  With the setbacks, how do the schools, throughout the state, stand on the level of accreditation solely based upon SOL pass rates?
+Public education is free and appropriate for all bodies from kindergarten age to 12th grade level.  Ever since Covid shut down the world in 2020, the education system has been under fire even more so due to students losing at least a year of learning while still being pushed forward with the expectation that those students are on pace with the learning curriculum for the new current grade or subject.
+
+With the school systems in Virginia, [the VDOE website](https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/sol-test-pass-rates-other-results) has a gap of data for the school year of 2020-2021 thus, a reset has been established.  With the setbacks, how do the schools, throughout the state, stand on the level of accreditation solely based upon SOL pass rates?
 
 
 ## 2. Data Architecture
@@ -25,7 +27,6 @@ The DBT process:
 
 - Pulls the data from BigQuery
 - Innerjoin the two dataframes
-- Change the -9999 to Null
 - Created two columns for Pass_Fail_(year)
 - Push the dataframe back to BigQuery
 
@@ -47,17 +48,12 @@ The technology used for the project are as follows:
  - __Repositiory__: [GitHub](https://github.com/)
  - __Visulization__: [Looker Studio](https://lookerstudio.google.com/)
 
-
-## 4. Setup
-
-The goal of this project was to build an end-to-end data pipeline.  First setup a VM that can run Anaconda Python and can be accessed with an SSH key.  Then create a BigQuery project through the Google Console that will store the data. This will require a policy role that allows access to read/write access to BigQuery.  Followed by creating a DBT project within the DBT Cloud that connects to the BigQuery using the role that was created to access read/write access to BigQuery.  A GitHub repository will also need to be created.  Connect the GitHub account to DBT and port over the files and folders for the DBT execution. Finally use Looker Studio and connect it to the google console and give it access to the integrated dataset to create dashboards.
-
-## 5. Dashboard
+## 4 Dashboard
 
 ![dashboard](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/Screenshot%202024-04-18%20021244.png)
 [dashboard](https://lookerstudio.google.com/s/hdFwzPT_GC0)
 
-## 6. Reproducibility
+## 5. Reproducibility
 
 ## Virtual Machine
 
@@ -144,9 +140,9 @@ The goal of this project was to build an end-to-end data pipeline.  First setup 
      ![configtable](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/configtable.png)
 
    - Transformation
-     -Inner join the dataframes
-     -Change -9999 to 'Null'
-     -Create two columns "Pass_Fail_(year)" that look at pass_rate and fill the column with the correct value that met the condition
+     - Inner join the dataframes
+     - Create two columns "Pass_Fail_(year)" that look at pass_rate and fill the column with the correct value that met the condition
+     - If the score was below a 70 then it was considered a Fail, Pass if above 70 and Null if the data was missing
 
      ![sqlcode](https://github.com/Williamsrandrew86/SOL-data-project/blob/main/sqlcode.png)
      
