@@ -1,4 +1,4 @@
-# Virginia School Accredition based on SOL passrates
+# Virginia School Accredition based on SOL pass rates
 
 ## 1. Description of the problem
 
